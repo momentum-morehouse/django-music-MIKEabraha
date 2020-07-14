@@ -5,3 +5,5 @@ from .models import Album
 def index(request):
   all_albums = Album.objects.all()
   return render(request, 'albums/list_album.html', context={'albums':all_albums})
+
+

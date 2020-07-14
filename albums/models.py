@@ -12,7 +12,7 @@ class Album(models.Model):
     
     
     def __str__(self):
-      return f"{self.title} by {self.artist}"
+      return f"{self.albumtitle} by {self.artistname}"
 
 class Users(models.Model):
   pass
