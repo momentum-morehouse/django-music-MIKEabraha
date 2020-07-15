@@ -5,9 +5,10 @@ from django.db import models
 
 class Album(models.Model):
 
-    artistname = models.CharField(max_length=255)
-    albumtitle = models.CharField(max_length=255)
-    released = models.DateField()
+    artistname = models.CharField(max_length=255, null = True, blank = True)
+    albumtitle = models.CharField(max_length=255,null = True, blank = True)
+    released = models.DateField(null=True, blank=True)
+    image_url = models.TextField(null=True, blank=True)
    
     
     
