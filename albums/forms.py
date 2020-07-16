@@ -1,8 +1,5 @@
 from django import forms
 from .models import Album 
-import datetime
-
-
 
 class AlbumForm(forms.ModelForm):
     class Meta:
@@ -10,18 +7,11 @@ class AlbumForm(forms.ModelForm):
         fields = [
             'albumtitle',
             'artistname',
-           
-           
-            
-            
+            'released',
+    
         ]
 
-        widgets = {
-        'Released': forms.DateInput(format=('%m/%d/%Y'), attrs={'class':'form-control', 'placeholder':'Select a date', 'type':'date'}),
+        widgets = {'released': forms.SelectDateWidget()
         }
-         
-class DateForm(forms.Form):
-   day = forms.DateField(initial=datetime.date.today)
-print(DateForm())       
-        
+
 

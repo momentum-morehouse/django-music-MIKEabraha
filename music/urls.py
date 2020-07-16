@@ -21,12 +21,14 @@ from albums import views as albums_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
     path('', albums_views.index, name='list_album'),
-    path('album/add', albums_views.add_album,name='add_album'),
 
-    path('album/<int:pk>/edit/', albums_views.edit_album, name='edit_album'),
+    path('albums/add', albums_views.add_album,name='add_album'),
 
-    path('album/<int:pk>/delete/', albums_views.delete_album, name='delete_album')
+    path('albums/<int:pk>/edit/', albums_views.edit_album, name='edit_album'),
+
+    path('albums/<int:pk>/delete/', albums_views.delete_album, name='delete_album')
 
     
 ]
@@ -37,5 +39,5 @@ if settings.DEBUG:
         path('__debug__/', include(debug_toolbar.urls)),
 
         # For django versions before 2.0:
-        # url(r'^__debug__/', include(debug_toolbar.urls)),
+         #(r'^__debug__/', include(debug_toolbar.urls)),
     ] + urlpatterns
