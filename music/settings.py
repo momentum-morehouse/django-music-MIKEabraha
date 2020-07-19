@@ -38,6 +38,7 @@ ALLOWED_HOSTS = ['django-music-mikeabraha-1--mikeabraha.repl.co',
 # Application definition
 
 INSTALLED_APPS = [
+    'registration',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

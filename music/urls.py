@@ -13,6 +13,7 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+import registration
 from django.contrib import admin
 from django.conf import settings
 from django.urls import include, path 
@@ -20,6 +21,8 @@ from albums import views as albums_views
 
 
 urlpatterns = [
+    path('accounts/', include( 'registration.backends.simple.urls')),
+
     path('admin/', admin.site.urls),
 
     path('', albums_views.index, name='list_album'),
