@@ -15,14 +15,15 @@
     <img src= "{{album.image_url}}" >
      
          
-    <h2>{{ album.albumtitle }}</h2>  
+    <h2>{{ album.albumtitle }}  
       
-     {{ album.artistname }}
-  
-      {{ album.released }}
+     {{ album.artistname }}</h2>
+<br>  
+     <h3> {{ album.released }} </h3>
     
  
     <center>
+        
    <p>
       <a href="{% url 'edit_album' pk=album.pk %}">Edit Album</a><br>    
       <a class="red" href="{% url 'delete_album' pk=album.pk %}">Delete Contact</a>

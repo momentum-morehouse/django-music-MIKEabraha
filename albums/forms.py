@@ -8,6 +8,7 @@ class AlbumForm(forms.ModelForm):
             'albumtitle',
             'artistname',
             'released',
+            'image_url',
     
         ]
 
