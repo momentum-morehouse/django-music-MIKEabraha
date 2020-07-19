@@ -1,19 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
-<div class= "everything"> 
+
 <h1>All albums</h1>
 
-
+<center>
 <p><a href="{% url 'add_album' %}">Add New Album</a></p>
-
-<div class="flex">
+</center>
+<div class= "everything"> 
   {% for album in albums %}
+<div class="flex">
 
+     
        
-  <aside>       
     <img src= "{{album.image_url}}" >
      
-  </aside>       
+         
     <h2>{{ album.albumtitle }}</h2>  
       
      {{ album.artistname }}
@@ -21,18 +22,18 @@
       {{ album.released }}
     
  
-
+    <center>
    <p>
       <a href="{% url 'edit_album' pk=album.pk %}">Edit Album</a><br>    
       <a class="red" href="{% url 'delete_album' pk=album.pk %}">Delete Contact</a>
     </p>
 
-
+    </center>
 <br>
 
-
-  {% endfor %}
 </div>
+  {% endfor %}
+
 </div>
 {% endblock %}
 

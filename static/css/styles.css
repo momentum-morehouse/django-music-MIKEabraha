@@ -6,9 +6,16 @@ body{
   display: flex;
   flex-wrap: wrap; 
   flex-direction: row;
-  border: red 10px solid; 
-  background: blue;
-  color: red;
+  border: red 2px solid; 
+  background: black;
+  color: yellow;
+  width: 350px;
+  height: 500px;
+  border-radius: 10%;
+  background:rgb(17, 75, 37);
+  text-align: justify;
+  text-justify: inter-word;
+
 }
 
 .everything {
@@ -16,9 +23,23 @@ body{
   flex-wrap: wrap; 
   flex-direction: row;
   justify-content: space-around;
+  border: purple 5px solid;
+
 }
 
+img{
 
+  margin-left: auto;
+  margin-right: auto;
+  width: 350px;
+  border-radius: 25%;
+}
+
+    
+
+
+
+}
 
  
 
